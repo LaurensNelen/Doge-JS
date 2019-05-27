@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <title>Doge js</title>
+</head>
+
+<body>
+    <div class="FlexContainer">
+        <button type="button" id="myButton" onmouseover="ChangeTextOnHover()" onclick="ShowDoge()">Doggo</button>
+        <img src="Assets/img/doge.png" id="doge" alt="">
+    </div>
+    <script type="text/javascript">
+        var button = document.getElementById("myButton");
+        var Doge = document.getElementById("doge");
+
+        function ShowDoge() {
+            if (Doge.style.display == "none") {
+                Doge.style.display = "block";
+            } else {
+                Doge.style.display = "none";
+            }
+        }
+
+        function ChangeTextOnHover() {
+            button.innerHTML = "Woof woof!";
+        }
+
+        function ChangeTextOnLoad() {
+            button.innerHTML = "woof!";
+        }
+
+        window.onload = ChangeTextOnLoad();
+    </script>
+</body>
+
+</html>
